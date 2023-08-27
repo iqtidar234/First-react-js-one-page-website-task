@@ -1,0 +1,11 @@
+.pricing {
+
+    &__carts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @include respond(tab-land) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

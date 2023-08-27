@@ -1,0 +1,36 @@
+.feature {
+
+    &__title {
+        max-width: 60rem;
+        margin: auto;
+        padding-bottom: 1rem;
+        // margin-bottom: 3rem;
+
+
+    }
+
+
+
+    &__options {
+        margin-top: -4rem;
+        display: grid;
+        grid-template-columns: 33.333% 33.333% 33.333%;
+
+        @include respond(tab-land) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__option--2 {
+        padding: 0 2rem;
+    }
+
+    &__option--img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.div2 {
+    @include animatedLine(12%, auto)
+}

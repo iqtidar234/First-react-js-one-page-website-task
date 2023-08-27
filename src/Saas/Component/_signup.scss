@@ -1,0 +1,69 @@
+.signup {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   padding: 2.4rem;
+   // height: 50rem;
+   // padding-bottom: 30rem;
+   // align-items: center;
+
+   @include respond(tab-port) {
+      // width: 95%;
+      padding: 3.2rem;
+      margin: auto;
+   }
+
+   &__logo {
+      font-size: 2.5rem;
+      color: white;
+      font-weight: 800;
+      text-decoration: none;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      // line-height: 1.6;
+      &--icon {
+         font-size: 3rem;
+         // vertical-align: middle;
+
+
+      }
+
+
+
+   }
+
+   &__text {
+      margin-top: 1.6rem;
+      margin-bottom: 2.4rem;
+   }
+
+   &__input-group {
+      display: flex;
+      justify-content: center;
+
+      @include respond(tab-port) {
+         height: 8rem;
+         width: 70%;
+         margin: auto;
+      }
+   }
+
+   &__input {
+      padding: 1rem;
+      width: 70%;
+      outline: none;
+      font-size: 1.6rem;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border: 2px solid #06A3DA;
+   }
+
+   &__btn {
+      width: 25%;
+      padding: 2rem 1rem;
+      margin-left: -.2rem;
+   }
+}

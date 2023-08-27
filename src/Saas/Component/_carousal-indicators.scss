@@ -1,0 +1,53 @@
+// STYLES FOR THE DOTS CONTAINER
+.slick-dots{
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Style for individual dots */
+.slick-dots li{
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        background-color: #DDDDDD;
+        border-radius: 3px;
+        transition: all 1s !important;     
+}
+
+/* Style for active dot */
+.slick-dots li button:before{
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    content: "." !important;
+    color: white !important;
+}
+
+
+/* Style for active dot */
+.slick-dots li.slick-active button:before
+{
+    // padding:0 1rem !important;
+    
+    background-color: #06A3DA;
+    color: white;
+    // width: 3rem !important;
+}
+.indicator{
+
+    &__dots{
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: #DDDDDD;
+        border-radius: 3px;
+        transition: all 1s;
+        
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+}
+
+.active-dot{
+    padding-right: 4rem;
+    background-color: #06A3DA;
+}

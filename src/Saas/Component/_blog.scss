@@ -1,0 +1,13 @@
+.blog {
+
+    &__post {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 4rem;
+
+        @include respond(tab-land) {
+            grid-template-columns: 1fr;
+            row-gap: 5rem;
+        }
+    }
+}

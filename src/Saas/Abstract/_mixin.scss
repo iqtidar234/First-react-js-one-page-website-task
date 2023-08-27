@@ -1,0 +1,68 @@
+@mixin respond($break-point) {
+  @if $break-point ==tab-land {
+    @media only screen and (max-width: 61.8em) {
+      @content;
+    }
+  }
+
+  @if $break-point ==tab-port {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+
+  @if $break-point ==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $break-point ==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin abscenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin animatedLine($width, $margin) {
+  background-color: #06A3DA;
+  width: $width;
+  height: 5px;
+  // margin: 50px 0px;
+  border-radius: 3px;
+  margin: $margin;
+  margin-bottom: 50px;
+
+  &__inner {
+    background-color: #fff;
+    height: 5px;
+    width: 5px;
+    animation: infiniteVerticle 6s infinite;
+    position: relative;
+  }
+}
+
+@mixin animatedLineSmall($width, $margin) {
+  background-color: #06A3DA;
+  width: $width;
+  height: 3px;
+  // margin: 50px 0px;
+  border-radius: 3px;
+  margin: $margin;
+  margin-bottom: 20px;
+
+  &__inner {
+    background-color: #fff;
+    height: 3px;
+    width: 3px;
+    animation: infiniteVerticle 6s infinite;
+    position: relative;
+  }
+}

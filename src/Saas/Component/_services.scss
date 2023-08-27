@@ -1,0 +1,90 @@
+.services {
+
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5rem;
+
+        @include respond(tab-land) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        position: relative;
+        height: 30rem;
+        padding: 0 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @include respond(tab-port) {
+            padding: 2rem 3rem;
+            height: 35rem;
+        }
+
+
+        &:last-child {
+            background-color: #06A3DA;
+            color: $color-white;
+
+
+        }
+
+        &--icon--box {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #06A3DA;
+            border-radius: 2px;
+            transform: rotate(-45deg);
+
+
+        }
+
+        &--icon {
+            transform: rotate(45deg);
+
+            @include respond(tab-port) {
+                font-size: 3rem;
+            }
+        }
+
+        &--call {
+            font-size: 3rem;
+        }
+
+        &--btn {
+            padding: 1rem 1.7rem;
+            font-size: 2rem;
+            cursor: pointer;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all .2s;
+            bottom: -4.8rem;
+            opacity: 0;
+        }
+
+
+
+        &:hover {
+
+            .hideshow {
+                bottom: -2.3rem;
+                opacity: 1;
+            }
+        }
+    }
+
+}

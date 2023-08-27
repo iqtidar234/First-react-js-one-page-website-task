@@ -1,0 +1,66 @@
+.counter {
+    max-width: 114rem;
+    display: flex;
+    margin: auto;
+    color: #06A3DA;
+    margin-top: -9rem;
+    z-index: 10;
+    position: relative;
+
+    @include respond(tab-land) {
+        max-width: 74rem;
+        margin: 10rem auto;
+        flex-direction: column;
+    }
+
+    @include respond(tab-port) {
+        max-width: 67.5rem;
+    }
+
+    &__box {
+        width: 33.333333%;
+        padding: 1rem;
+
+        @include respond(tab-land) {
+            width: 100%;
+            padding: 3rem;
+        }
+    }
+
+    &__elements {
+        display: flex;
+        height: 13rem;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+
+        &--icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 6rem;
+            height: 6rem;
+            font-size: 2rem;
+            border-radius: 2px;
+        }
+
+        &--text {
+            padding-left: 1.5rem;
+            text-align: center;
+
+            h5 {
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 0;
+                // line-height:0.5;
+            }
+
+            h1 {
+                font-size: 4.5rem;
+                margin-bottom: 0;
+                line-height: 1;
+                font-weight: bold;
+            }
+        }
+    }
+}

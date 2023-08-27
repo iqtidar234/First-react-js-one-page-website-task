@@ -1,0 +1,13 @@
+.container {
+    max-width: 114rem;
+    margin: 7rem auto;
+
+    @include respond(tab-land) {
+        max-width: 74rem;
+        margin: 10rem auto;
+    }
+
+    @include respond(tab-port) {
+        max-width: 67.5rem;
+    }
+}

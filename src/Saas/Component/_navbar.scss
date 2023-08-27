@@ -1,0 +1,133 @@
+.nav {
+    z-index: 3;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    background-color: transparent;
+    align-items: center;
+    border-bottom: .5px solid rgb(184, 184, 184);
+    margin-bottom: -8rem;
+    // background-color: rgba(47, 47, 250, 0.404);
+
+
+    @include respond(tab-land) {
+        background-color: white;
+        flex-direction: column;
+        align-items: start;
+        height: 100%;
+    }
+
+    &__menu {
+        color: #2BB1E0;
+        cursor: pointer;
+        font-size: 2rem;
+        position: absolute;
+        top: 25%;
+        right: 5%;
+        display: none;
+        border: .5rem solid #2BB1E0;
+        border-radius: .4rem;
+        padding: .5rem 1rem;
+
+
+        @include respond(tab-land) {
+            display: flex;
+        }
+    }
+
+    &__logo {
+        font-size: 4rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: $color-white;
+        text-align: left;
+
+        @include respond(tab-land) {
+            color: #2BB1E0;
+        }
+
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        transition: 0.5s;
+        justify-content: center;
+        align-items: center;
+
+
+        @include respond(tab-land) {
+            flex-direction: column;
+            padding-left: 2rem;
+            width: 100%;
+            display: none;
+
+            transform: translateY(0);
+        }
+    }
+
+    &__items {
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+
+        @include respond(tab-land) {
+            margin-bottom: 1.5rem;
+            width: 100%;
+
+            &:hover,
+            &:active {
+                border-bottom: white;
+            }
+        }
+    }
+
+    &__links {
+        text-decoration: none;
+        font-size: 1.8rem;
+        color: $color-white;
+        padding-bottom: 2.5rem;
+        transition: .2s;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+            border-bottom: 2px solid #2BB1E0;
+            color: #2BB1E0;
+        }
+
+        @include respond(tab-land) {
+            color: black;
+
+            &:hover,
+            &:active {
+                border-bottom: none;
+            }
+        }
+
+        &--search {
+            color: #2BB1E0;
+        }
+    }
+
+}
+
+.open {
+    display: block;
+    // transform: translateY(-150%);
+}
+
+.nav.stickey {
+    background-color: $color-white !important;
+    color: #2BB1E0 !important;
+    position: fixed;
+    width: 100%;
+    transition: all .3s;
+    z-index: 20;
+}
+
+.burger-active {
+    top: 5%;
+}
