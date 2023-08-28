@@ -31,9 +31,9 @@ const Navbar = () => {
       <ul className={`nav__list ${menu ? 'open' : ''}`} >
         <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/'>Home</NavLink></li>
         <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/about'>About</NavLink></li>
-        <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/'>Services</NavLink></li>
-        <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/'>Blog</NavLink></li>
-        <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/'>Contact</NavLink></li>
+        <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/services'>Services</NavLink></li>
+        <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/blog'>Blog</NavLink></li>
+        <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/contact'>Contact</NavLink></li>
         <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null} nav__links--search`}><FaSearch /></NavLink></li>
         <li className="nav__items"><button className="btn">Download pro version</button>
         </li>
