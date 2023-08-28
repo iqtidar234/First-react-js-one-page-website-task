@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { FaUser, FaBars } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
@@ -18,10 +18,19 @@ const Navbar = () => {
     }
   }
 
+  const documentClick = (e) => {
+    if (!e.target.className.startsWith('nav')) {
+      setMenu(false)
+    }
+  }
 
   window.addEventListener('resize', changeBackground)
 
   window.addEventListener('scroll', changeBackground)
+
+  useEffect(() => {
+    document.addEventListener('click', documentClick)
+  }, [menu])
 
   return (
     <nav className={`${stickyNavBar ? 'nav stickey' : 'nav'}`}>
