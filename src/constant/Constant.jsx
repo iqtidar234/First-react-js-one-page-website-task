@@ -201,5 +201,22 @@ const footerLinks2 = {
     },]
 }
 
-const menuItems = ['Home', 'About', 'Services', 'Blog', 'Contact']
+const menuItems = [{
+    text: 'Home',
+    link: '/'
+}, {
+    text: 'About',
+    link: '/about'
+}, {
+    text: 'Services',
+    link: '/services'
+}, {
+    text: 'Blog',
+    link: '/blog'
+}, {
+    text: 'Contact',
+    link: '/contact'
+}]
+
+
 export { ServicesItems, quoteItems, carousalItems, teamItems, socialIcons, blogPosts, brandsItems, footerLocation, footerLinks, footerLinks2, menuItems };
