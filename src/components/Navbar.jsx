@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { FaUser, FaBars } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
+import { menuItems } from '../constant/Constant';
+
+
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
   const [stickyNavBar, setStickyNavBar] = useState(false)
@@ -29,11 +32,15 @@ const Navbar = () => {
       </div>
 
       <ul className={`nav__list ${menu ? 'open' : ''}`} >
-        <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/'>Home</NavLink></li>
+        {menuItems.map((menu) => {
+          return (
+            <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/'>{menu}</NavLink></li>)
+        })}
+        {/* <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/'>Home</NavLink></li>
         <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/about'>About</NavLink></li>
         <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/services'>Services</NavLink></li>
         <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/blog'>Blog</NavLink></li>
-        <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/contact'>Contact</NavLink></li>
+        <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null}`} to='/contact'>Contact</NavLink></li> */}
         <li className="nav__items"><NavLink className={`nav__links ${stickyNavBar ? 'text-primary' : null} nav__links--search`}><FaSearch /></NavLink></li>
         <li className="nav__items"><button className="btn">Download pro version</button>
         </li>
