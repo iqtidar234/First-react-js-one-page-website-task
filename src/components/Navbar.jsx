@@ -28,9 +28,9 @@ const Navbar = () => {
 
   window.addEventListener('scroll', changeBackground)
 
-  useEffect(() => {
-    document.addEventListener('click', documentClick)
-  }, [menu])
+  document.addEventListener('click', documentClick)
+  // useEffect(() => {
+  // }, [menu])
 
   return (
     <nav className={`${stickyNavBar ? 'nav stickey' : 'nav'}`}>
